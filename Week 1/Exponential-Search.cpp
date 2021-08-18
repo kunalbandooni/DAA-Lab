@@ -1,13 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int linear_search(vector<int> v,int e){
-    int n=v.size();
-    for(int i=0;i<n;i++){
-        if(v[i]==e)
-            return i;
-    }
-    return -1;
+int exp_search(vector<int> v,int e){
+    
 }
 int main(){
     int t;
@@ -21,7 +16,7 @@ int main(){
             v.push_back(ad);
         }
         cin>>e;
-        int m=linear_search(v,e);
+        int m=exp_search(v,e);
         if(m==-1)
             cout<<"Not Present "<<n;
         else    
