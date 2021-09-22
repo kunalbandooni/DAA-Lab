@@ -18,7 +18,6 @@ void binary_search(vector<int> v,int e){
     else 
         cout<<"Not Present ";
     cout<<t;
-    return;
 }
 int main(){
     int t;

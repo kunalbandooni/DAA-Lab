@@ -2,7 +2,24 @@
 #include<vector>
 using namespace std;
 int jump_search(vector<int> v,int e){
-    
+    int n=v.size();
+    int jumps=sqrt(n);
+    int steps=jumps;
+    int prev=0;
+    while(v[int(min(steps,n)-1)]<e){
+        prev=steps;
+        steps+=jump;
+        if(prev>=n)
+            return -1;
+    }
+    while(v[int(prev)]<e){
+        prev+=1;
+        if(prev == min(steps, n))
+            return -1;
+    }
+    if(v[int(prev)] == e)
+        return prev;
+    return -1;
 }
 int main(){
     int t;
